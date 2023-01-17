@@ -12,12 +12,22 @@
     --black: #040b03;
     --ff-main: 'Nunito Sans', sans-serif;
     --ff-accent: 'Great Vibes', cursive;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
 }
 
 body {
     background-color: var(--neutral);
     background-image: url(./assets/pexels-jessica-lewis-creative-2239674.jpg);
     font-family: var(--ff-main);
+    display: grid;
+    grid-template-rows: auto;
+    
+}
+
+main {
+    padding: 0 15rem;
 }
 
 nav {
@@ -35,11 +45,31 @@ nav li {
 
 header {
     background-color: var(--grey-dark);
+    max-height: 300px;
 }
 
 header img {
     max-width: 20%;
     margin: auto;
+}
+
+h1 {
+    font-family: var(--ff-accent);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+}
+
+#banner {
+    display: grid;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
 
 footer {
