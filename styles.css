@@ -9,3 +9,6 @@
     --black: #040b03;
 }
 
+header {
+    background-color: var(--grey-dark);
+}
