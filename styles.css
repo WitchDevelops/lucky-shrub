@@ -12,3 +12,7 @@
 header {
     background-color: var(--grey-dark);
 }
+
+header img {
+    max-width: 20%;
+}
