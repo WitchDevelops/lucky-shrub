@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 :root {
     --white: #e6f1f1;
     --neutral: #eaf9f8;
@@ -7,11 +10,14 @@
     --main-600: #6c8c7f;
     --main-800: #4c7c48;
     --black: #040b03;
+    --ff-main: 'Nunito Sans', sans-serif;
+    --ff-accent: 'Great Vibes', cursive;
 }
 
 body {
     background-color: var(--neutral);
     background-image: url(./assets/pexels-jessica-lewis-creative-2239674.jpg);
+    font-family: var(--ff-main);
 }
 
 nav {
