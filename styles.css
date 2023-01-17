@@ -17,7 +17,9 @@ nav {
     background-color: black;
     color: var(--white);
     position: sticky;
+    top: 0;
     display: flex;
+    height: 3rem;
 }
 
 nav li {
@@ -30,6 +32,7 @@ header {
 
 header img {
     max-width: 20%;
+    margin: auto;
 }
 
 footer {
