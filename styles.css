@@ -9,10 +9,19 @@
     --black: #040b03;
 }
 
+nav {
+    background-color: black;
+    position: sticky;
+}
+
 header {
     background-color: var(--grey-dark);
 }
 
 header img {
     max-width: 20%;
+}
+
+footer {
+    background-color: var(--black);
 }
