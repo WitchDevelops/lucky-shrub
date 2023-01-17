@@ -23,7 +23,7 @@ body {
     font-family: var(--ff-main);
     display: grid;
     grid-template-rows: auto;
-    
+
 }
 
 main {
@@ -36,12 +36,44 @@ nav {
     position: sticky;
     top: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 3rem;
 }
 
-nav li {
-    display: inline-block;
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+.nav-links li {
+    padding: 0 3rem;
+}
+
+/* code from chat gpt, doesn 't show the button */
+
+/* Responsive menu button */
+.menu-btn {
+    display: none;
+  }
+  .menu-btn__burger {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--main-600);
+  }
+  
+  /* Hide links and show menu button on small screens */
+  @media (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
 
 header {
     background-color: var(--grey-dark);
