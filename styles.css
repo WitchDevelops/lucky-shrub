@@ -9,9 +9,19 @@
     --black: #040b03;
 }
 
+body {
+    background-color: var(--neutral);
+}
+
 nav {
     background-color: black;
+    color: var(--white);
     position: sticky;
+    display: flex;
+}
+
+nav li {
+    display: inline-block;
 }
 
 header {
@@ -24,4 +34,7 @@ header img {
 
 footer {
     background-color: var(--black);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
