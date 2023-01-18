@@ -20,7 +20,7 @@
     --fw-bold: 700;
 
     /* shadow effects */
-    --shadow: drop-shadow(0 0 2rem var(--black));
+    --shadow: drop-shadow(0 0 1rem var(--main-600));
     --vignette: inset 0px 0px 300px var(--black);
 }
 
@@ -36,8 +36,15 @@ body {
 }
 
 main {
-    padding: 0 15rem;
+    padding: 3rem 15rem;
+    background-image: url(./assets/pexels-irina-iriser-1090977.jpg);
+    animation: zoom 5s ease 0s 1 normal forwards;
+    box-shadow: var(--vignette);
 }
+
+/*******************************************************/
+/******************** navbar styles ********************/
+/*******************************************************/
 
 nav {
     background-color: black;
@@ -79,43 +86,41 @@ nav {
     color: var(--black);
 }
 
-/* code from chat gpt, doesn 't show the button */
+/*******************************************************/
+/******************** button styles ********************/
+/*******************************************************/
 
-/* Responsive menu button */
-.menu-btn {
-    display: none;
+button {
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--main-200);
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
 }
 
-.menu-btn__burger {
-    width: 25px;
-    height: 3px;
-    margin: 5px;
+button:hover,
+button:focus {
     background-color: var(--main-600);
+    color: var(--white);
+    box-shadow: var(--shadow);
 }
 
-/* Hide links and show menu button on small screens */
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
+button:active {
+    background-color: var(--main-800);
+    color: var(--white);
+    -webkit-transform: translate(0px, 3px);
+    -moz-transform: translate(0px, 3px);
+    -ms-transform: translate(0px, 3px);
+    -o-transform: translate(0px, 3px);
+    transform: translate(0px, 3px);
+    box-shadow: var(--shadow);
 }
 
-header {
-    background:
-        var(--grey-dark) url(./assets/pexels-claire-morgan-4068015-opt.jpg) no-repeat fixed top;
-    max-height: 400px;
-}
-
-header img {
-    max-width: 50%;
-    display: block;
-    margin: auto;
-    padding: 5rem 0;
-}
+/*******************************************************/
+/****************** text tags styles *******************/
+/*******************************************************/
 
 h1 {
     font-family: var(--ff-accent);
@@ -149,6 +154,31 @@ p {
     margin: auto;
 }
 
+p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+/*******************************************************/
+/******************* header section ********************/
+/*******************************************************/
+
+header {
+    background:
+        var(--grey-dark) url(./assets/pexels-claire-morgan-4068015-opt.jpg) no-repeat fixed top;
+    max-height: 400px;
+}
+
+header img {
+    max-width: 50%;
+    display: block;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+/*******************************************************/
+/********************* promo banner ********************/
+/*******************************************************/
+
 .banner {
     display: grid;
     justify-content: center;
@@ -157,11 +187,137 @@ p {
     color: var(--neutral);
 }
 
-main {
-    background-image: url(./assets/pexels-irina-iriser-1090977.jpg);
-    animation: zoom 5s ease 0s 1 normal forwards;
-    box-shadow: var(--vignette);
+/*******************************************************/
+/******************** cards section ********************/
+/*******************************************************/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    backdrop-filter: blur(10px);
 }
+
+.cards img {
+    margin-top: 3rem;
+}
+
+/******************** article ********************/
+article {
+    background-color: var(--white);
+    padding: 3rem;
+    transition: 0.2s;
+}
+
+article:hover {
+    filter: var(--shadow);
+}
+
+/******************** about us ********************/
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+/******************** services ********************/
+/******************** accordion ********************/
+
+.accordionTitle {
+    background-color: var(--grey-light);
+    color: var(--black);
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.accordionTitle:hover {
+    background-color: var(--main-800);
+}
+
+.accordionContent p {
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.accordionTitle+.accordionContent {
+    display: none;
+}
+
+.accordionTitle.is-open+.accordionContent {
+    display: block;
+}
+
+/******************** contact ********************/
+/******************** input ********************/
+textarea {
+    resize: none;
+    outline: 1px solid var(--main-200);
+    color: var(--black);
+    padding: 0.7rem;
+}
+
+textarea::placeholder {
+    color: var(--grey-dark);
+}
+
+textarea:hover,
+textarea:focus,
+textarea:active {
+    outline: 1px solid var(--main-800);
+}
+
+/******************** links********************/
+address a:visited {
+    color: var(--main-600);
+}
+
+address a:hover,
+address a:active {
+    color: var(--main-800);
+    font-weight: var(--fw-bold);
+}
+
+/******************** minimap ********************/
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/*******************************************************/
+/******************** footer section ********************/
+/*******************************************************/
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 10rem;
+}
+
+footer img {
+    max-height: 10rem;
+    float: right;
+    padding-right: 5rem;
+}
+
+/*******************************************************/
+/******************** accessibility ********************/
+/*******************************************************/
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*******************************************************/
+/******************** animations ********************/
+/*******************************************************/
 
 @keyframes zoom {
     0% {
@@ -193,101 +349,4 @@ main {
     100% {
         text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
     }
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    backdrop-filter: blur(10px);
-}
-.cards img {
-    margin-top: 3rem;
-}
-article {
-    background-color: var(--white);
-    padding: 3rem;
-    transition: 0.2s;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-}
-
-article:hover {
-    box-shadow: var(--shadow);
-}
-
-textarea {
-    resize: none;
-    outline: 1px solid var(--main-200);
-    color: var(--black);
-    padding: 0.7rem;
-}
-
-textarea::placeholder {
-    color: var(--grey-dark);
-}
-
-textarea:hover,
-textarea:focus,
-textarea:active {
-    outline: 1px solid var(--main-800);
-}
-
-button {
-    padding: 1rem;
-    width: 100%;
-    background-color: var(--main-200);
-    display: flex;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: var(--fw-bold);
-}
-
-button:hover,
-button:focus {
-    background-color: var(--main-600);
-    color: var(--white);
-    box-shadow: var(--shadow);
-}
-
-button:active {
-    background-color: var(--main-800);
-    color: var(--white);
-    -webkit-transform: translate(0px, 3px);
-    -moz-transform: translate(0px, 3px);
-    -ms-transform: translate(0px, 3px);
-    -o-transform: translate(0px, 3px);
-    transform: translate(0px, 3px);
-    box-shadow: var(--shadow);
-}
-
-a:visited {
-    color: var(--main-600);
-}
-
-a:hover,
-a:active {
-    color: var(--main-800);
-    font-weight: var(--fw-bold);
-}
-
-iframe {
-    width: 100%;
-    height: 300px;
-}
-
-footer {
-    background-color: var(--black);
-    color: var(--white);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    height: 10rem;
-}
-
-footer img {
-    max-height: 10rem;
-    float: right;
-    padding-right: 5rem;
 }
