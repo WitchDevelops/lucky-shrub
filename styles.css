@@ -46,6 +46,9 @@ nav {
     font-size: 1.5rem;
     height: 5rem;
     padding-right: 15rem;
+    -webkit-box-shadow: 2px 2px 24px 0px var(--black);
+    -moz-box-shadow: 2px 2px 24px 0px var(--black);
+    box-shadow: 2px 2px 24px 0px var(--black);
 }
 
 .nav-links,
@@ -53,7 +56,7 @@ nav {
     display: flex;
     align-items: center;
     height: 100%;
-   
+
 }
 
 .nav-links li {
@@ -98,11 +101,7 @@ nav {
 
 header {
     background:
-        var(--grey-dark) 
-        url(./assets/pexels-claire-morgan-4068015-opt.jpg) 
-        no-repeat 
-        fixed 
-        top;
+        var(--grey-dark) url(./assets/pexels-claire-morgan-4068015-opt.jpg) no-repeat fixed top;
     max-height: 400px;
 }
 
@@ -152,34 +151,37 @@ main {
 }
 
 @keyframes zoom {
-	0% {
-		background-position: center top;
-		background-size: 100%;
-	}
-
-	100% {
-		background-position: center top;
-		background-size: 150%;
-	}
-}  
-
- @-webkit-keyframes text-shadow-drop-center {
     0% {
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        background-position: center top;
+        background-size: 100%;
     }
+
     100% {
-      text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+        background-position: center top;
+        background-size: 150%;
     }
-  }
-  @keyframes text-shadow-drop-center {
+}
+
+@-webkit-keyframes text-shadow-drop-center {
     0% {
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
+
     100% {
-      text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
     }
-  }
-  
+}
+
+@keyframes text-shadow-drop-center {
+    0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+    }
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
