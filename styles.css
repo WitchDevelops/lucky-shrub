@@ -26,11 +26,9 @@
 
 body {
     background-color: var(--neutral);
-    background-image: url(./assets/pexels-jessica-lewis-creative-2239674.jpg);
     font-family: var(--ff-main);
     display: grid;
     grid-template-rows: auto;
-
 }
 
 main {
@@ -43,20 +41,34 @@ nav {
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    height: 3rem;
+    font-size: 1.5rem;
+    height: 5rem;
+    padding-right: 15rem;
 }
 
-.nav-links {
+.nav-links,
+.nav-links li {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    height: 100%;
+   
 }
 
 .nav-links li {
+    max-width: 200px;
     padding: 0 3rem;
+    transition-duration: 0.2s;
+}
+
+.nav-links li:hover {
+    background-color: var(--main-800);
+}
+
+.nav-links li:active {
+    background-color: var(--main-600);
+    color: var(--black);
 }
 
 /* code from chat gpt, doesn 't show the button */
@@ -86,7 +98,11 @@ nav {
 
 header {
     background:
-        var(--grey-dark) url(./assets/pexels-claire-morgan-4068015.jpg) no-repeat fixed center;
+        var(--grey-dark) 
+        url(./assets/pexels-claire-morgan-4068015-opt.jpg) 
+        no-repeat 
+        fixed 
+        top;
     max-height: 400px;
 }
 
