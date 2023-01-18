@@ -115,6 +115,9 @@ header img {
 
 h1 {
     font-family: var(--ff-accent);
+    font-size: 9rem;
+    color: var(--white);
+    margin: auto;
 }
 
 h2 {
@@ -122,9 +125,44 @@ h2 {
     font-weight: var(--fw-bold);
 }
 
-#banner {
-    display: grid;
+h3 {
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
+
+p {
+    font-size: 1.2rem;
+    font-weight: var(--fw-light);
+    margin: auto;
+}
+
+.banner {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3rem;
+    color: var(--neutral);
+}
+
+
+main {
+    background-image: url(./assets/pexels-irina-iriser-1090977.jpg);
+    animation: zoom 5s ease 0s 1 normal forwards;
+}
+
+@keyframes zoom {
+	0% {
+		background-position: center top;
+		background-size: 100%;
+	}
+
+	100% {
+		background-position: center top;
+		background-size: 150%;
+	}
+}
+
 
 .cards {
     display: grid;
