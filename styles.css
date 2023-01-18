@@ -141,14 +141,14 @@ p {
     display: grid;
     justify-content: center;
     align-content: center;
-    margin-top: 3rem;
+    margin: 5rem auto;
     color: var(--neutral);
 }
-
 
 main {
     background-image: url(./assets/pexels-irina-iriser-1090977.jpg);
     animation: zoom 5s ease 0s 1 normal forwards;
+    shadow: var(--vignette);
 }
 
 @keyframes zoom {
@@ -161,27 +161,56 @@ main {
 		background-position: center top;
 		background-size: 150%;
 	}
-}
+}  
 
-
+ @-webkit-keyframes text-shadow-drop-center {
+    0% {
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @keyframes text-shadow-drop-center {
+    0% {
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+    }
+  }
+  
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    padding: 1.5rem;
 }
+
+article {
+    background-color: var(--grey-light);
+    padding: 3rem;
+    transition: 0.2s;
+    box-shadow: var(--shadow);
+}
+
+article:hover {
+    background-color: var(--white);
+}
+
+
 
 footer {
     background-color: var(--black);
     color: var(--white);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     align-items: center;
     height: 10rem;
 }
 
 footer img {
-    max-height: 3rem;
+    max-height: 10rem;
     float: right;
     padding-right: 5rem;
 }
