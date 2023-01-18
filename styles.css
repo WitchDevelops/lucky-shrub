@@ -20,7 +20,7 @@
     --fw-bold: 700;
 
     /* shadow effects */
-    --shadow: drop-shadow(0 0 2rem var(--black));
+    --shadow: drop-shadow(0 0 1rem var(--main-600));
     --vignette: inset 0px 0px 300px var(--black);
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 main {
-    padding: 0 15rem;
+    padding: 3rem 15rem;
 }
 
 nav {
@@ -204,18 +204,56 @@ main {
 .cards img {
     margin-top: 3rem;
 }
+
 article {
     background-color: var(--white);
     padding: 3rem;
     transition: 0.2s;
-    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
 }
 
 article:hover {
-    box-shadow: var(--shadow);
+    filter: var(--shadow);
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordionTitle {
+    background-color: var(--grey-light);
+    color: var(--off-black);
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+
+  .accordionTitle:hover {
+    background-color: var(--grey-dark);
+  }
+
+.accordionContent {
+
+    transition: max-height 0.2s ease-in;
+    width: 80%;
+    margin: auto;
+  }
+
+  .accordionContent p {
+    padding: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .accordionTitle+.accordionContent {
+    display: none;
+  }
+  
+  .accordionTitle.is-open+.accordionContent {
+    display: block;
+  }
+
+  
 
 textarea {
     resize: none;
@@ -291,3 +329,12 @@ footer img {
     float: right;
     padding-right: 5rem;
 }
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
