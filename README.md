@@ -6,4 +6,4 @@ It's a project develped for the Meta Front-End Developer Professional Certificat
 
 # See it live
 
-[witchdevelops.github.io/lucky-shrub](https://witchdevelops.github.io/lucky-shrub/))
+[witchdevelops.github.io/lucky-shrub](https://witchdevelops.github.io/lucky-shrub/)
