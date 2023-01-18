@@ -24,6 +24,10 @@
     --vignette: inset 0px 0px 300px var(--black);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--neutral);
     font-family: var(--ff-main);
@@ -159,7 +163,7 @@ p:last-of-type {
 main {
     background-image: url(./assets/pexels-irina-iriser-1090977.jpg);
     animation: zoom 5s ease 0s 1 normal forwards;
-    shadow: var(--vignette);
+    box-shadow: var(--vignette);
 }
 
 @keyframes zoom {
@@ -254,7 +258,7 @@ button:active {
     -ms-transform: translate(0px, 3px);
     -o-transform: translate(0px, 3px);
     transform: translate(0px, 3px);
-    drop-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 a:visited {
@@ -265,6 +269,11 @@ a:hover,
 a:active {
     color: var(--main-800);
     font-weight: var(--fw-bold);
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
 }
 
 footer {
