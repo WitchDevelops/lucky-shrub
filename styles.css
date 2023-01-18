@@ -21,7 +21,7 @@
 
     /* shadow effects */
     --shadow: drop-shadow(0 0 2rem var(--black));
-    --vignette: inset 0px 0px 150px var(--black);
+    --vignette: inset 0px 0px 300px var(--black);
 }
 
 body {
@@ -107,21 +107,10 @@ header {
 }
 
 header img {
-    max-width: 20%;
+    max-width: 50%;
     display: block;
     margin: auto;
     padding: 5rem 0;
-    filter: var(--shadow);
-}
-
-header:after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-shadow: var(--vignette);
 }
 
 h1 {
