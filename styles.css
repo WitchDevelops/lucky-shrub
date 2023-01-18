@@ -108,5 +108,14 @@ footer {
     background-color: var(--black);
     color: var(--white);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    
+    align-items: center;
+    height: 10rem;
+}
+
+footer img {
+    max-height: 3rem;
+    float: right;
+    padding-right: 5rem;
 }
