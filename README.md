@@ -32,6 +32,6 @@ Screenshot of my project:
 
 # What I learned
 
-1. I learned that for the placeholder text to appear correctly both the opening and closing tags of ``` <textarea></textarea> ``` have to be on the same line in HTML! As if the parser was taking the white spaces between them as input characters and palcing the cursor at the end of the placeholder text, but also in the same time making it invisible. It's an odd behavior but something to keep in mind for the future.
+1. I learned that for the placeholder text to appear correctly, both the opening and closing tags of ``` <textarea></textarea> ``` have to be on the same line in HTML! As if the parser was taking the white spaces between them as input characters and placing the cursor at the end of the placeholder text, but also in the same time making it invisible. It's an odd behavior but something to keep in mind for the future.
 2. That ``` background ``` property is not something to be animated with CSS, yet having a transition on a background image is possible. It works smootly in Firefox, and a bit choppy in Chrome.
 3. Working with iframes.
