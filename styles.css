@@ -37,7 +37,7 @@ body {
 }
 
 main {
-    padding: 3rem 15rem;
+    padding: 3vmin 15vmin;
     background-image: url(./assets/pexels-irina-iriser-1090977_optimized.jpg);
     animation: zoom 5s ease 0s 1 normal forwards;
     box-shadow: var(--vignette);
@@ -165,9 +165,7 @@ p:last-of-type {
 
 header {
     background:
-        var(--grey-dark) 
-        url(./assets/pexels-claire-morgan-4068015-opt_optimized.jpg) 
-        no-repeat fixed top;
+        var(--grey-dark) url(./assets/pexels-claire-morgan-4068015-opt_optimized.jpg) no-repeat fixed top;
     background-size: cover;
     max-height: 400px;
 }
@@ -201,8 +199,11 @@ header img {
 /*******************************************************/
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ align-content: flex-start;
+    justify-content: center;
     gap: 3rem;
     backdrop-filter: blur(10px);
 }
@@ -217,6 +218,7 @@ article {
     padding: 3rem;
     transition: 0.2s;
     position: relative;
+    width: 30%;
 }
 
 article:hover {
